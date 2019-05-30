@@ -1,0 +1,28 @@
+#include <os2.h>
+#include "dialog.h"
+
+ICON IDR_CLIENT DIALOG.ICO
+
+MENU IDR_CLIENT
+{
+   SUBMENU "~Dialog", IDM_DIALOG
+   {
+      MENUITEM "~Modeless dialog...", IDM_MODELESS
+      MENUITEM "Modal ~dialog...", IDM_MODAL
+      MENUITEM SEPARATOR
+      MENUITEM "E~xit", IDM_EXIT
+   }
+}
+
+DLGTEMPLATE IDD_EXAMPLE LOADONCALL MOVEABLE DISCARDABLE
+{
+   DIALOG  "Dialog example", IDD_EXAMPLE, 53, 28, 260, 55,
+      WS_VISIBLE,
+      FCF_SYSMENU | FCF_TITLEBAR
+   {
+      LTEXT "?", IDT_DIALOGNAME, 10, 40, 240, 8
+      LTEXT "?", IDT_CLICK, 10, 30, 240, 8
+      DEFPUSHBUTTON "OK", DID_OK, 10, 10, 50, 13
+   }
+}
+

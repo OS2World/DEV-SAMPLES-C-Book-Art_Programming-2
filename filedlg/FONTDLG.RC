@@ -1,0 +1,12 @@
+#include <os2.h>
+#include "fontdlg.h"
+
+MENU RES_CLIENT
+{
+   SUBMENU "~Fonts", IDM_SUB1
+   {
+      MENUITEM "~Change font...", IDM_FONT
+      MENUITEM "E~xit", IDM_EXIT
+   }
+}
+

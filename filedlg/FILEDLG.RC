@@ -1,0 +1,14 @@
+#include <os2.h>
+#include "filedlg.h"
+
+MENU RES_CLIENT
+{
+   SUBMENU "~File", IDM_SUB1
+   {
+      MENUITEM "~New" , IDM_NEW
+      MENUITEM "~Open File...", IDM_OPEN
+      MENUITEM "~Close File", IDM_CLOSE
+      MENUITEM "E~xit" , IDM_EXIT
+   }
+}
+

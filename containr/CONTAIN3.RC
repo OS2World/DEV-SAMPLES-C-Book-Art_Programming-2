@@ -1,0 +1,22 @@
+#include <os2.h>
+#include "contain3.h"
+
+ICON ICO_ITEM CONTAIN3.ICO
+
+MENU RES_CLIENT
+{
+   SUBMENU "~Views   ", M_VIEWS
+   {
+      MENUITEM "~Icon", MI_ICON
+      MENUITEM "~Detail", MI_DETAIL
+      MENUITEM "~Tree", MI_TREE
+      MENUITEM "~Name/flowed", MI_NAMEFLOWED
+      MENUITEM "Te~xt/flowed", MI_TEXTFLOWED
+   }
+   SUBMENU "E~xit", M_EXIT
+   {
+      MENUITEM "E~xit", MI_EXIT
+      MENUITEM "~Resume", MI_RESUME
+   }
+}
+

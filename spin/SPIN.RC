@@ -1,0 +1,9 @@
+#include <os2.h>
+#include "spin.h"
+
+ACCELTABLE ID_WINDOW
+{
+    VK_TAB, IDK_TAB, VIRTUALKEY
+    VK_BACKTAB, IDK_BACKTAB, VIRTUALKEY, SHIFT
+}
+

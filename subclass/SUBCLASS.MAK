@@ -1,0 +1,12 @@
+SUBCLASS.EXE:                   SUBCLASS.OBJ
+        LINK386 @<<
+SUBCLASS
+SUBCLASS
+SUBCLASS
+OS2386
+SUBCLASS
+<<
+
+SUBCLASS.OBJ:                   SUBCLASS.C
+        ICC -C+ -Kb+ -Ss+ SUBCLASS.C
+

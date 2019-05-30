@@ -1,0 +1,6 @@
+NAME FILEDLG WINDOWAPI
+DESCRIPTION 'File dialog example
+             Copyright (c) 1992 by Kathleen Panov.
+             All rights reserved.'
+STACKSIZE 16384
+

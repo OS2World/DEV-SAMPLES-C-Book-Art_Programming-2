@@ -1,0 +1,15 @@
+#include <os2.h>
+#include "listbox.h"
+
+DLGTEMPLATE IDD_LISTBOX LOADONCALL MOVEABLE DISCARDABLE
+{
+   DIALOG "Listbox Example", IDD_LISTBOX, 12, 6, 170, 107,
+       WS_VISIBLE,
+       FCF_SYSMENU | FCF_TITLEBAR
+   {
+      LISTBOX IDL_LISTBOX, 14, 33, 135, 63, LS_OWNERDRAW
+      DEFPUSHBUTTON "OK", DID_OK, 3, 10, 40, 13, WS_GROUP
+      PUSHBUTTON "Cancel", DID_CANCEL, 48, 10, 40, 13
+   }
+}
+

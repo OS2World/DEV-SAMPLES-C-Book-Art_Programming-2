@@ -1,0 +1,64 @@
+#define INCL_DOSMEMMGR
+#define INCL_DOSEXCEPTIONS
+
+#include <os2.h>
+#include <stdio.h>
+
+void main(void);
+ULONG MyExceptionHandler(PEXCEPTIONREPORTRECORD pTrap );
+
+void main()
+{
+
+    PBYTE BaseAddress1;
+    ULONG Size;
+    USHORT i;
+    EXCEPTIONREGISTRATIONRECORD Exception;
+    APIRET rc;
+
+    Exception.ExceptionHandler = (_ERR *)&MyExceptionHandler;
+    rc = DosSetExceptionHandler(&Exception);
+    printf("\nReturnCode from DosSetExceptionHandler = %d", rc );
+
+    rc = DosAllocMem((PVOID *)&BaseAddress1, 73727,  PAG_READ|
+        PAG_WRITE  );
+    printf("\nReturn Code from DosAllocMem, %d BA1 = %p", rc, BaseAddress1 );
+
+    rc = DosSetMem(BaseAddress1, 8192L, PAG_COMMIT |PAG_DEFAULT );
+    printf("\nReturn Code from DosSetMem, %d BA1 = %p", rc, BaseAddress1 );
+
+
+/***************************************************************************
+   This next call fails with Return Code, 87 */
+
+    rc = DosSetMem(BaseAddress1+4096, 1L, PAG_GUARD|PAG_DEFAULT|PAG_COMMIT );
+    printf("\nReturn Code from DosSetMem, %d BA1 = %p", rc, BaseAddress1 );
+
+    for (i = 0; i < 4075; i++)
+        *BaseAddress1++ = 3;
+
+    for (i = 4075; i < 4100; i++){
+        printf("\nNow writing to %dth byte", i );
+        *BaseAddress1++ = 3;
+    }
+
+    DosFreeMem(BaseAddress1);
+
+}
+
+
+ULONG MyExceptionHandler(PEXCEPTIONREPORTRECORD pTrap )
+{
+
+    ULONG Attrib;
+    ULONG Size;
+
+    if (pTrap->ExceptionNum == XCPT_GUARD_PAGE_VIOLATION ){
+        DosBeep(300,100);
+        return(XCPT_CONTINUE_EXECUTION);
+    }
+
+
+    return(XCPT_CONTINUE_SEARCH);
+}
+

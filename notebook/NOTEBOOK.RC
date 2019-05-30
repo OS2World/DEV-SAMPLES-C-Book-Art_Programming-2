@@ -1,0 +1,41 @@
+#include <os2.h>
+#include "notebook.h"
+
+DLGTEMPLATE IDD_PERSONAL
+{
+   DIALOG "Personal Information", IDD_PERSONAL, 5, 0, 265, 126,
+      NOT FS_DLGBORDER
+   {
+      GROUPBOX "Personal Information", -1, 0, 26, 251, 101
+      LTEXT "Name:", -1, 6, 106, 29, 8
+      LTEXT "Address:", -1, 6, 85, 39, 8
+      LTEXT "City:", -1, 6, 63, 19, 8
+      LTEXT "State:", -1, 134, 63, 26, 8
+      LTEXT "Zip:", -1, 6, 40, 18, 8
+      LTEXT "Phone:", -1, 134, 40, 31, 8
+      ENTRYFIELD "", IDE_NAME, 55, 107, 181, 8, ES_MARGIN
+      ENTRYFIELD "", IDE_ADDRESS, 55, 85, 181, 8, ES_MARGIN
+      ENTRYFIELD "", IDE_CITY, 31, 65, 96, 8, ES_MARGIN
+      ENTRYFIELD "", IDE_STATE, 169, 65, 67, 8, ES_MARGIN
+      ENTRYFIELD "", IDE_ZIP, 31, 42, 96, 8, ES_MARGIN
+      ENTRYFIELD "", IDE_PHONE, 169, 42, 67, 8, ES_MARGIN
+   }
+}
+
+DLGTEMPLATE IDD_OS2
+{
+   DIALOG  "TEAMOS2 Information", IDD_OS2, 5, 0, 265, 126,
+      NOT FS_DLGBORDER
+   {
+      GROUPBOX "TEAMOS2 Information", -1, 0, 26, 253, 101
+      LTEXT "TEAMOS2 Name:", -1, 6, 106, 74, 8
+      LTEXT "User Group:", -1, 6, 85, 53, 8
+      LTEXT "Level of OS/2 Experience", -1, 59, 67, 109, 8
+      ENTRYFIELD "", IDE_TEAMOS2, 90, 102, 146, 8, ES_MARGIN
+      ENTRYFIELD "", IDE_USERGROUP, 90, 85,  146, 8, ES_MARGIN
+      AUTORADIOBUTTON "OS/2 Beginner", IDR_BEGIN, 68, 52, 77, 10, WS_TABSTOP
+      AUTORADIOBUTTON "OS/2 Intermediate", IDR_INTERMEDIATE, 68, 39, 91, 10, WS_TABSTOP
+      AUTORADIOBUTTON "OS/2 Expert", IDR_EXPERT, 68, 27, 65, 10, WS_TABSTOP
+   }
+}
+

@@ -1,0 +1,8 @@
+NAME BUTTON WINDOWAPI
+DESCRIPTION 'Button example.
+             Copyright (c) 1992 by Kathleen Panov.
+             All rights reserved.'
+
+PROTMODE
+STACKSIZE    32768
+

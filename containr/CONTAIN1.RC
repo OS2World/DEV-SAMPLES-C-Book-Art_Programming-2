@@ -1,0 +1,20 @@
+#include <os2.h>
+#include "contain1.h"
+
+ICON ICO_ITEM CONTAIN1.ICO
+
+MENU RES_CLIENT
+{
+   SUBMENU "~Views", M_VIEWS
+   {
+      MENUITEM "~Icon", MI_ICON
+      MENUITEM "~Name/flowed", MI_NAMEFLOWED
+      MENUITEM "Te~xt/flowed", MI_TEXTFLOWED
+   }
+   SUBMENU "E~xit", M_EXIT
+   {
+      MENUITEM "E~xit", MI_EXIT
+      MENUITEM "~Resume", MI_RESUME
+   }
+}
+

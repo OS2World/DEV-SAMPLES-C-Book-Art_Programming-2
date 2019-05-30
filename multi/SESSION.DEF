@@ -1,0 +1,8 @@
+NAME SESSION WINDOWCOMPAT
+
+DESCRIPTION 'DosStartSession example
+Copyright (c) 1992 by Kathleen Panov.
+All rights reserved.'
+
+STACKSIZE 16384
+

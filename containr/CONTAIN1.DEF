@@ -1,0 +1,7 @@
+NAME  CONTAIN1  WINDOWAPI
+
+DESCRIPTION 'First container example
+             Copyright 1992 by Larry Salomon
+             All rights reserved.'
+STACKSIZE 32768
+

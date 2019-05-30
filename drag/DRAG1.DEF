@@ -1,0 +1,8 @@
+NAME DRAG1 WINDOWAPI
+
+DESCRIPTION 'Drag example 1
+Copyright (c) 1992 by Larry Salomon
+All rights reserved.'
+
+STACKSIZE 16384
+

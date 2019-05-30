@@ -1,0 +1,15 @@
+#include <os2.h>
+#include "value.h"
+
+DLGTEMPLATE IDD_VALUE
+{
+   DIALOG  "Color Set", IDD_VALUE, 58, 36, 105, 75,
+      WS_VISIBLE, FCF_TITLEBAR | FCF_SYSMENU
+   {
+      LTEXT "Choose Color", -1, 10, 10, 85, 8
+      CONTROL "", IDV_VALUE, 12, 27, 81, 41, WC_VALUESET,
+         VS_COLORINDEX | VS_BORDER | WS_TABSTOP | WS_VISIBLE
+         CTLDATA 8, 0, 3, 4
+   }
+}
+

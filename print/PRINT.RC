@@ -1,0 +1,30 @@
+#include <os2.h>
+#include "rc.h"
+
+ACCELTABLE RES_CLIENT
+{
+   "^p", MI_PRINT, CHAR
+   "^P", MI_PRINT, CHAR
+   "^s", MI_SETUP, CHAR
+   "^S", MI_SETUP, CHAR
+   "^r", MI_REFRESH, CHAR
+   "^R", MI_REFRESH, CHAR
+   VK_F3, MI_EXIT, VIRTUALKEY
+}
+
+MENU RES_CLIENT
+{
+   SUBMENU "~Print", M_SAMPLE
+   {
+      MENUITEM "~Print sample\tCtrl P", MI_PRINT
+      MENUITEM "Printer ~setup...\tCtrl S", MI_SETUP
+      MENUITEM SEPARATOR
+      MENUITEM "~Refresh list\Ctrl R", MI_REFRESH
+   }
+   SUBMENU "E~xit", M_EXIT
+   {
+      MENUITEM "E~xit sample\tF3", MI_EXIT
+      MENUITEM "~Resume", MI_RESUME
+   }
+}
+
